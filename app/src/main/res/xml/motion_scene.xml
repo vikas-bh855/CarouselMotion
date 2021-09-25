@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        android:id="@+id/backward"
+        app:constraintSetEnd="@id/previous"
+        app:constraintSetStart="@id/start"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:touchAnchorSide="right" />
+        <KeyFrameSet>
+            <KeyAttribute
+                android:elevation="4dp"
+                app:framePosition="30"
+                app:motionTarget="@+id/image2" />
+        </KeyFrameSet>
+    </Transition>
+    <Transition
+        android:id="@+id/forward"
+        app:constraintSetEnd="@id/next"
+        app:constraintSetStart="@id/start"
+        app:duration="1000">
+        <OnSwipe
+            app:dragDirection="dragLeft"
+            app:touchAnchorSide="left" />
+        <KeyFrameSet>
+            <KeyAttribute
+                android:elevation="4dp"
+                app:framePosition="30"
+                app:motionTarget="@+id/image4" />
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/previous">
+        <Constraint
+            android:id="@+id/image1"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="50dp"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/image2"
+            app:layout_constraintEnd_toStartOf="@id/guide"
+            app:roundPercent="0.2"/>
+
+        <Constraint
+            android:id="@+id/image2"
+            android:layout_width="120dp"
+            android:layout_height="200dp"
+            android:background="@color/white"
+            android:elevation="5dp"
+            android:scaleType="fitXY"
+            app:crossfade="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundPercent="0.2"/>
+
+
+        <Constraint
+            android:id="@+id/image3"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="50dp"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/image2"
+            app:layout_constraintStart_toEndOf="@id/guide"
+            app:roundPercent="0.2"/>
+
+        <Constraint
+            android:id="@+id/image4"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            android:elevation="1dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/image2"
+            app:layout_constraintStart_toEndOf="@id/guide"
+            app:roundPercent="0.2"/>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/image1"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            android:elevation="1dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/image3"
+            app:layout_constraintEnd_toStartOf="@id/guide"
+            app:roundPercent="0.2" />
+
+        <Constraint
+            android:id="@+id/image2"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="50dp"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/image3"
+            app:layout_constraintEnd_toStartOf="@id/guide"
+            app:roundPercent="0.2" />
+
+        <Constraint
+            android:id="@+id/image3"
+            android:layout_width="120dp"
+            android:layout_height="200dp"
+            android:background="@color/white"
+            android:elevation="5dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundPercent="0.2" />
+
+        <Constraint
+            android:id="@+id/image4"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="50dp"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/image3"
+            app:layout_constraintStart_toEndOf="@id/guide"
+            app:roundPercent="0.2" />
+
+        <Constraint
+            android:id="@+id/image5"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            android:elevation="1dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/image3"
+            app:layout_constraintEnd_toStartOf="@id/guide"
+            app:roundPercent="0.2" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/next">
+
+        <Constraint
+            android:id="@+id/image2"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            android:elevation="1dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/image3"
+            app:layout_constraintEnd_toStartOf="@id/guide"
+            app:roundPercent="0.2" />
+
+        <Constraint
+            android:id="@+id/image3"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="50dp"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/image4"
+            app:layout_constraintEnd_toStartOf="@id/guide"
+            app:roundPercent="0.2" />
+
+        <Constraint
+            android:id="@+id/image4"
+            android:layout_width="120dp"
+            android:layout_height="200dp"
+            android:background="@color/white"
+            android:elevation="5dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundPercent="0.2" />
+
+        <Constraint
+            android:id="@+id/image5"
+            android:layout_width="80dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="50dp"
+            android:background="@color/white"
+            android:elevation="1dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/image4"
+            app:layout_constraintStart_toEndOf="@id/guide"
+            app:roundPercent="0.2" />
+    </ConstraintSet>
+</MotionScene>
