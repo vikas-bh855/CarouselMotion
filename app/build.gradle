@@ -7,12 +7,15 @@ android {
     compileSdk 30
 
     defaultConfig {
+        def properties = new Properties()
+        properties.load(project.rootProject.file("local.properties").newDataInputStream())
+
         applicationId "com.example.myapplication"
         minSdk 21
         targetSdk 30
         versionCode 1
         versionName "1.0"
-
+        buildConfigField "String", "API_KEY", properties.getProperty("API_KEY", "")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -28,6 +31,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
     }
 }
 

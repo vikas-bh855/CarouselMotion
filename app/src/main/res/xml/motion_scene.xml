@@ -12,7 +12,7 @@
         <KeyFrameSet>
             <KeyAttribute
                 android:elevation="4dp"
-                app:framePosition="30"
+                app:framePosition="60"
                 app:motionTarget="@+id/image2" />
         </KeyFrameSet>
     </Transition>
@@ -27,7 +27,7 @@
         <KeyFrameSet>
             <KeyAttribute
                 android:elevation="4dp"
-                app:framePosition="30"
+                app:framePosition="60"
                 app:motionTarget="@+id/image4" />
         </KeyFrameSet>
 

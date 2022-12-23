@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Transition
+        app:constraintSetEnd="@id/up"
+        app:constraintSetStart="@id/start">
+        <OnSwipe app:dragDirection="dragUp" />
+    </Transition>
+
+
+    <Transition
+        app:constraintSetEnd="@id/startLeft"
+        app:constraintSetStart="@id/up">
+        <OnSwipe app:dragDirection="dragLeft" />
+    </Transition>
+
+    <Transition
+        app:constraintSetEnd="@id/startRight"
+        app:constraintSetStart="@id/up">
+        <OnSwipe app:dragDirection="dragRight" />
+    </Transition>
+
+    <Transition
+        app:constraintSetEnd="@id/endRight"
+        app:constraintSetStart="@id/start">
+        <OnSwipe app:dragDirection="dragRight" />
+    </Transition>
+
+    <Transition
+        app:constraintSetEnd="@id/endLeft"
+        app:constraintSetStart="@id/start">
+        <OnSwipe app:dragDirection="dragLeft" />
+
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/endRight">
+        <Constraint
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="500dp"
+            app:cardBackgroundColor="@color/teal_200"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/center"
+            app:layout_constraintWidth_percent="1" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/endLeft">
+        <Constraint
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="500dp"
+            app:cardBackgroundColor="@color/teal_200"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/center"
+            app:layout_constraintWidth_percent="1" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="500dp"
+            app:cardBackgroundColor="@color/teal_200"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/center"
+            app:layout_constraintWidth_percent="1" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/up">
+        <Constraint
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="500dp"
+            app:cardBackgroundColor="@color/teal_200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="1" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/startLeft">
+        <Constraint
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="500dp"
+            app:cardBackgroundColor="@color/teal_200"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="1" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/startRight">
+        <Constraint
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="500dp"
+            app:cardBackgroundColor="@color/teal_200"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="1" />
+
+    </ConstraintSet>
+
+
+</MotionScene>

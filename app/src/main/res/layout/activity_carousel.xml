@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/motion_scene"
+    tools:context=".CarouselActivity">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/image1"
+        android:layout_width="80dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/white"
+        android:elevation="1dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/image3"
+        app:layout_constraintEnd_toStartOf="@id/guide"
+        app:roundPercent="0.2" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/image2"
+        android:layout_width="80dp"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/image3"
+        app:layout_constraintEnd_toStartOf="@id/guide"
+        android:scaleType="fitXY"
+        app:roundPercent="0.2" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/image3"
+        android:layout_width="120dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="30dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundPercent="0.2" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/image4"
+        android:layout_width="80dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/image3"
+        app:layout_constraintStart_toEndOf="@id/guide"
+        app:roundPercent="0.2" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/image5"
+        android:layout_width="80dp"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:elevation="1dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/image3"
+        app:layout_constraintStart_toEndOf="@id/guide"
+        app:roundPercent="0.2" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.helper.widget.Carousel
+        android:id="@+id/carousel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:carousel_backwardTransition="@id/backward"
+        app:carousel_firstView="@id/image3"
+        app:carousel_forwardTransition="@id/forward"
+        app:carousel_infinite="true"
+        app:carousel_nextState="@id/next"
+        app:carousel_previousState="@id/previous"
+        app:constraint_referenced_ids="image1,image2,image3,image4, image5" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
